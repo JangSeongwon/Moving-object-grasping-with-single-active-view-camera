@@ -1,0 +1,6 @@
+Tue Jun 21 11:51:18 2022
+ERROR: GLEW initalization error: Missing GL version
+
+Tue Jun 21 13:52:51 2022
+ERROR: GLEW initalization error: Missing GL version
+
