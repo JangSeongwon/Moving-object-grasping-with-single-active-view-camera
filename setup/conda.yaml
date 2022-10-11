@@ -1,4 +1,4 @@
-name: lookcloser
+name: singleactiveviewcamera
 channels:
   - defaults
 dependencies:
