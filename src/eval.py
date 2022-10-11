@@ -65,14 +65,14 @@ def main(args):
 			action_space=args.action_space,
 		) if args.eval_mode is not None else None
 
-		dir_name = 'Active_Camera_SAC'
+		dir_name = 'Active_Camera_SAC2'
 
 		# Create working directory
 		work_dir = os.path.join(args.log_dir, args.domain_name+'_'+args.task_name, args.algorithm, args.exp_suffix, dir_name ,str(args.seed + s))
 		print('Working directory:', work_dir)
 
 		model_dir = utils.make_dir(os.path.join(work_dir, 'model'))
-		video_dir = utils.make_dir(os.path.join(work_dir, 'video'))
+		video_dir = utils.make_dir(os.path.join(work_dir, 'videos'))
 
 		if not os.path.exists(os.path.join(model_dir, str(args.train_steps)+'.pt')):
 			print("Skipping evaluation for ", work_dir)
