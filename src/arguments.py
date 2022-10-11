@@ -26,7 +26,7 @@ def parse_args():
 	parser.add_argument('--hidden_dim_state', default=16, type=int)
 	parser.add_argument('--image_size', default=128, type=int)
 	parser.add_argument('--concat', default=0, type=int) # Either concatenate observations (=0) or Add (=1)
-	parser.add_argument('--load_steps', default='200000', type=str)
+	parser.add_argument('--load_steps', default='500000', type=str)
 
 	# actor
 	parser.add_argument('--actor_lr', default=1e-3, type=float)
@@ -68,10 +68,10 @@ def parse_args():
 	parser.add_argument('--mean_zero', default=False, action='store_true')
 
 	# eval
-	parser.add_argument('--save_freq', default='50k', type=str)
-	parser.add_argument('--eval_freq', default='50k', type=str)
-	parser.add_argument('--eval_episodes', default=1, type=int)
-	parser.add_argument('--success_rate_check', default='500', type=str)
+	parser.add_argument('--save_freq', default='50k', type=str) #50k, Saving training model data
+	parser.add_argument('--eval_freq', default='1000', type=str) #Eval+video during training
+	parser.add_argument('--eval_episodes', default=100, type=int)
+	parser.add_argument('--success_rate_check', default='100', type=str)
 
 	# misc
 	parser.add_argument('--seed', default=99, type=int)
@@ -81,8 +81,8 @@ def parse_args():
 	parser.add_argument('--num_seeds', default=1, type=int) # Number of seeds to evaluate on
 
 	# wandb's setting
-	parser.add_argument('--wandb', default=True, action='store_true')
-	parser.add_argument('--wandb_project', default='aa', type=str)
+	parser.add_argument('--wandb', default=False, action='store_true')
+	parser.add_argument('--wandb_project', default='oct', type=str)
 	parser.add_argument('--wandb_name', default='Run', type=str)
 	parser.add_argument('--wandb_group', default=None, type=str)
 	parser.add_argument('--wandb_job', default=None, type=str)
