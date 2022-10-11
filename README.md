@@ -10,7 +10,7 @@ nvidia-smi -q (Check GPU temperature)
 
 Used manipulator : Ufactory xArm 7 robot 
 ------
-Used algorithm for path planning : SAC  
+Used RL algorithm : SAC  
 ------
 Used algorithm for vision data processing : Convolution network Encoder(CURL)
 ------
