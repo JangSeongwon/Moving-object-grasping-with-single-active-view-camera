@@ -4,7 +4,7 @@ import torch
 import color_jitter
 import numpy as np
 class VideoRecorder(object):
-    def __init__(self, dir_name, height=448, width=448, camera_id=0, fps=25):
+    def __init__(self, dir_name, height=640, width=640, camera_id=0, fps=25):
         self.dir_name = dir_name
         self.height = height
         self.width = width
