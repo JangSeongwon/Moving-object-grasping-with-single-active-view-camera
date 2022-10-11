@@ -1,5 +1,8 @@
 # Moving-object-grasping-with-single-active-view-camera
 -------------
+
+From 'Jangir, Rishabh, et al. "Look Closer: Bridging Egocentric and Third-Person Views With Transformers for Robotic Manipulation." IEEE Robotics and Automation Letters 7.2 (2022): 3046-3053.'
+
 Grasping movng objects using robot
 -------------
 
