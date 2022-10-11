@@ -100,7 +100,7 @@ def main(args):
 	print('Working directory:', work_dir)
 	utils.make_dir(work_dir)
 	model_dir = utils.make_dir(os.path.join(work_dir, 'model'))
-	video_dir = utils.make_dir(os.path.join(work_dir, 'video'))
+	video_dir = utils.make_dir(os.path.join(work_dir, 'video2'))
 	video = VideoRecorder(video_dir if args.save_video else None, height=448, width=448, fps=15 if args.domain_name == 'robot' else 25)
 	utils.write_info(args, os.path.join(work_dir, 'info.log'))
 
@@ -123,7 +123,7 @@ def main(args):
 	)
 
 	# UNCOMMENT NEXT LINE TO LOAD A TRAINED AGENT
-	#agent = torch.load(os.path.join(model_dir, str(args.load_steps)+'.pt'))
+	agent = torch.load(os.path.join(model_dir, str(args.load_steps)+'.pt'))
 
 	start_step, episode, episode_reward, info, done, episode_success = 0, 0, 0, {}, True, 0
 	L = Logger(work_dir)
