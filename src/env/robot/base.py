@@ -237,25 +237,6 @@ class BaseEnv(robot_env.RobotEnv):
 
         return super(BaseEnv, self).step(action)
 
-    def render_obs(self, mode=None, width=448, height=448, camera_id=None):
-        self._render_callback()
-        data = []
-        for cam in self.cameras:
-            if cam=='first_person':
-                width1 = 640
-                height1 = 640
-                img = self.sim.render(width1, height1, camera_name=cam, depth=False)[::-1, :, :]
-                img = cv2.resize(img, dsize=(128, 128), interpolation=cv2.INTER_CUBIC)
-                # plt.imshow(img)
-                # plt.show()
-            else:
-                img = self.sim.render(width, height, camera_name=cam, depth=False)[::-1, :, :]
-                plt.imshow(img)
-                plt.show()
-
-            data.append(img)
-        return np.asarray(data)
-
     def render_video(self, mode=None, width=1080, height=1080, camera_id=None):
         data = []
         img = self.sim.render(width, height, camera_name='third_person', depth=False)[::-1, :, :]
