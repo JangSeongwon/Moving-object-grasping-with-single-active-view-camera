@@ -1,3 +1,7 @@
+
+
+
+
 # Moving-object-grasping-with-single-active-view-camera
 -------------
 
@@ -23,3 +27,10 @@ Used algorithm for vision data processing : Convolution network Encoder(CURL)
 Used simulator : mujoco  
 
 ------
+
+
+Objects moving in a Sinusoidal trajectory 
+https://user-images.githubusercontent.com/87692888/195542071-400b205f-5dc4-46a5-9496-4eda0e9240e2.mp4
+
+Objects moving in a Straight line 
+https://user-images.githubusercontent.com/87692888/195541959-1b75ee57-7e97-45ec-942b-aa69c8678070.mp4
