@@ -1,9 +1,0 @@
-
-Use README : conda env create -f setup/conda.yaml
-
-+Install " pip install wandb "
-+login   " wandb login "
-
-But for my CUDA version to be ran, Need to download my torch version
-pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
-
