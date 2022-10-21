@@ -1,0 +1,100 @@
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+1. Python 상위 폴더 내 파일 참조 code
+
+Solution : 
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+2. Error of [ Failed to initialize OpenGl ]
+
+Solution : Either CUDA+mujoco_py version update problem or add to bashrc 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so'
+But for anaconda environment : " export LD_PRELOAD=/home/jang/anaconda3/grasp/envs/lib/x86_64-linux-gnu/libGLEW.so "
+
+And need to install
+conda install -c conda-forge glew
+conda install -c anaconda mesa-libegl-cos6-x86_64
+conda install -c anaconda cmake
+conda install -c anaconda libx11-devel-cos6-x86_64
+conda install -c conda-forge xorg-libx11
+conda install -c anaconda libglu
+conda install -c anaconda freeglut
+conda install -c conda-forge glfw
+
+conda install -c conda-forge mesalib
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+3. Error of [ Could not build wheels for mpi4py ] when installing pip3 install mpi4py
+ 
+Solution : 
+
+    pip3 install --upgrade pip
+
+    conda install gxx_linux-64
+
+    sudo apt-get install libopenmpi-dev
+    
+    Also likely problem of not having path settings in bashrc for mujoco200(210)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+4. Error of [ No module named 'cv2' ]
+
+Solution : 'pip install opencv-python'
+
++Needed modules
+pip install wandb
+pip install colorlog
+pip install hjson
+pip install h5py
+pip install tqdm
+pip install scipy
+pip install matplotlib
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+5. Error of downloaded mujoco200 but looks for mujoco210
+
+Solution : With very high probability, problem of mujoco_py version
+            For mujoco200, Need this version : pip install -U 'mujoco-py<2.1,>=2.0' 
+            For mujoco210, Need this version : pip3 install -U 'mujoco-py<2.2,>=2.1'  
+            
+            
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+6. Error of mujoco license not being recognized although it is installed
+
+Solution : reboot or new terminal
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+7. Error of [ No module named 'gym.envs.robotics' ]
+
+Solution : Go to directory anaconda3/envs/(env name)/lib/python?.?(version)/site-packages/ and add gym/envs/robotics by hand
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+8. Error of [ module 'gym' has no attribute 'GoalEnv' ]
+
+Solution : It is problem from gym version. Install gym again by 'pip install gym==0.21.0'
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
